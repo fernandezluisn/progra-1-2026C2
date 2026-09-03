@@ -10,4 +10,4 @@ while contador < 10:
 promedio = acumulador / contador
 
 # El fstring permite dar formato a una impresión por consola
-print(f"El promedio de las notas es {promedio:.1f}")
+print(f"El promedio de las notas es {promedio:.2f}")
