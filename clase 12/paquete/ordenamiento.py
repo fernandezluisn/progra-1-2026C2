@@ -36,3 +36,32 @@ def ordenar_burbujas(lista: list) -> list:
         respuesta = lista    
 
     return respuesta
+
+def ordenar_rapido(lista: list) -> list:
+
+    '''
+    '''
+
+    menores = []
+    iguales = []
+    mayores = []
+
+    # recordar validar
+
+    if len(lista) > 1:
+
+        pivote = lista[0]
+
+        for i in range(len(lista)):
+            if lista[i] < pivote:
+                menores.append(lista[i])
+            elif lista[i] > pivote:
+                mayores.append(lista[i])
+            else:
+                iguales.append(lista[i])
+
+        resultado  = ordenar_rapido(menores) + iguales + ordenar_rapido(mayores)
+    else:
+        resultado = lista
+
+    return resultado

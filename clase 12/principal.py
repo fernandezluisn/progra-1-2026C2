@@ -1,5 +1,5 @@
 from paquete.validaciones import *
-from paquete.ordenamiento import ordenar_burbujas
+from paquete.ordenamiento import ordenar_burbujas, ordenar_rapido
 
 #Ñ
 #print(chr(241))
@@ -39,7 +39,9 @@ while ejecutar:
             print(lista)
 
         case 4:
-            ordenar_burbujas(lista)
+            print(ordenar_rapido(lista))
+        case 5:
+            print(ordenar_burbujas(lista))
         case 9:
             ejecutar = False
 
